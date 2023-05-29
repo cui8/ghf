@@ -8,8 +8,7 @@ RUN  apt update && \
         https://github.com/LyzenX/DouyinLiveRecorder/archive/refs/heads/main.zip && \
      cd /opt/ && \
      unzip DouyinLiveRecorder.zip && \
-     cd ./DouyinLiveRecorder-main/ && \
-     python -m pip install -r requirements.txt  && \
-     rm -rf /DouyinLiveRecorder-main
-WORKDIR /opt/
-CMD python main.pyw
+     mv /opt/DouyinLiveRecorder-main/ / && \
+     cd /DouyinLiveRecorder-main/ && \
+     python -m pip install -r requirements.txt
+CMD /bin/bash
