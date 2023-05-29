@@ -9,5 +9,7 @@ RUN  apt update && \
      cd /opt/ && \
      unzip DouyinLiveRecorder.zip && \
      cd ./DouyinLiveRecorder-main/ && \
-     python -m pip install -r requirements.txt
+     python -m pip install -r requirements.txt  && \
+     rm -rf /DouyinLiveRecorder-main
+WORKDIR /opt/DouyinLiveRecorder-main/
 CMD /bin/bash
