@@ -4,9 +4,12 @@ RUN  apt update && \
      apt install -y curl && \
      curl \
         --location \
-        --output /DouyinLiveRecorder.zip \
+        --output /opt/DouyinLiveRecorder.zip \
         https://github.com/LyzenX/DouyinLiveRecorder/archive/refs/heads/main.zip && \
+     cd /opt/ && \
      unzip DouyinLiveRecorder.zip && \
-     cd /DouyinLiveRecorder-main/ && \
-     python -m pip install -r requirements.txt
-CMD /bin/bash
+     cd ./DouyinLiveRecorder-main/ && \
+     python -m pip install -r requirements.txt  && \
+     rm -rf /DouyinLiveRecorder
+WORKDIR /opt/DouyinLiveRecorder-main/
+CMD python main.pyw
