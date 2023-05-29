@@ -11,5 +11,5 @@ RUN  apt update && \
      cd ./DouyinLiveRecorder-main/ && \
      python -m pip install -r requirements.txt  && \
      rm -rf /DouyinLiveRecorder-main
-WORKDIR /opt/DouyinLiveRecorder-main/
+WORKDIR /opt/
 CMD python main.pyw
