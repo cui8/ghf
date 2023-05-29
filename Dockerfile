@@ -1,4 +1,4 @@
-FROM python:3.12.0b1-slim-buster
+FROM python:3.9-slim
 RUN  apt update && \
      apt install -y zip && \
      apt install -y curl && \
