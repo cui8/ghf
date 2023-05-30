@@ -2,6 +2,7 @@ FROM python:3.9-slim
 RUN  apt update && \
      apt install -y zip && \
      apt install -y curl && \
+     apt install ffmpeg && \
      curl \
         --location \
         --output /opt/DouyinLiveRecorder.zip \
